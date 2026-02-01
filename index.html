@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <!-- javascript fil placeras i head taggen med defer attributet så att den först börjar laddas när html är laddat klart-->
+  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Barbora Gustafsson Memoryspel</title>
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <div class="header">
+      <!-- dekorationsbild-->
+      <div>
+        <img src="memoryGamesImages/pinguinCAKE.webp" alt="Penguin with a cake" class="headerPenguin">
+      </div>
+      <!-- header text-->
+      <div class="introText">
+        <h1 class="mainHeadline">Hur bra är ditt minne?</h1>
+        <h2>Är du på hugget? Låt oss testa!</h2>
+      </div>
+      <!-- dekorationsbild-->
+      <div>
+        <img src="memoryGamesImages/pinguinPhoto.webp" alt="Penguin with a camera" class="headerPenguin">
+      </div>
+
+    </div>
+    <!-- knappar för att starta spelet och välja svårighetsgrad -->
+    <div class="buttons">
+      <button id="easyButton" class="btn" data-game="easy">nytt spel: <br>LÄTT </button>
+      <button id="mediumButton" class="btn" data-game="medium">nytt spel: <br>MEDIUM </button>
+      <button id="hardButton" class="btn" data-game="hard">nytt spel: <br> HÅRD </button>
+    </div>
+    <!-- här finns nedräkningsklocka  -->
+    <p id="countDown" style="font-size: 25px;"></p>
+  </div>
+
+  <!-- tom div där memoryspelet skapas dynamiskt-->
+  <div class="containerMemory">
+
+  </div>
+  <!-- winner modal, visas inte tills spelet är vunnen-->
+
+  <div id="myModal" class="modalCloseWinner" data-modal="modal">
+    <div class="modal-content">
+      <H2>DU VANN! </h2>
+      <div class="winnerMessage">
+
+      </div>
+      <p>Vill du spela igen? </p>
+      <div>
+
+        <button class="btn " data-game="easy">nytt spel: <br>LÄTT</button>
+        <button class="btn " data-game="medium">nytt spel: <br>MEDIUM</button>
+        <button class="btn " data-game="hard">nytt spel: <br>HÅRD</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- looser modal, visas inte tills spelet är förlorat-->
+
+  <div id="myModalLooser" class="modal-close-looser" data-modal="modal-looser">
+    <div class="modalContentLooser">
+      <h1>ÅH NEJ, DU VAR FÖR SEEEG! </h1>
+      <div class="looserMessage">
+
+      </div>
+      <p>Vill du spela igen? </p>
+      <div>
+
+        <button class="btn " data-game="easy">nytt spel: <br>LÄTT</button>
+        <button class="btn " data-game="medium">nytt spel: <br>MEDIUM</button>
+        <button class="btn " data-game="hard">nytt spel: <br>HÅRD</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer med dynamisk uppdaterande år-->
+
+  <footer>
+    <div>
+      <img src="memoryGamesImages/pinguin.webp" alt="penguin group">
+    </div>
+    © <span id="year"></span> by Barbora Gustafsson
+  </footer>
+
+
+
+</body>
+
+</html>
